@@ -3,8 +3,8 @@ using Microsoft.EntityFrameworkCore;
 using AppContext = App.Context.AppContext;
 
 var connectionString = Environment.GetEnvironmentVariable("CONNECTION_STRING");
-if (string.IsNullOrWhiteSpace(connectionString))
-    throw new ApplicationException("Connection string was not supplied");
+/*if (string.IsNullOrWhiteSpace(connectionString))
+    throw new ApplicationException("Connection string was not supplied");*/
 
 var builder = WebApplication.CreateBuilder(args);
 

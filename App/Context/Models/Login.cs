@@ -5,8 +5,8 @@ namespace App.Context.Models;
 public class Login
 {
     [Key]
-    public required int Id { get; set; }
+    public required Guid Id { get; set; }
 
-    public required string Username { get; set; }
-    public required string Password { get; set; }
+    public string? Username { get; set; }
+    public string? Password { get; set; }
 }

@@ -1,11 +1,20 @@
 ﻿using System.Diagnostics;
+using App.Context.Models;
 using Microsoft.AspNetCore.Mvc;
 using App.Models;
+using AppContext = App.Context.AppContext;
 
 namespace App.Controllers;
 
 public class HomeController : Controller
 {
+    private readonly AppContext _appContext;
+
+    public HomeController(AppContext appContext)
+    {
+        _appContext = appContext;
+    }
+
     public IActionResult Index()
     {
         return View();
@@ -16,10 +25,8 @@ public class HomeController : Controller
         return View();
     }
     
-    public IActionResult LoginUser(string username, string password)
+    public IActionResult LoginUser(string? username, string? password)
     {
-        Console.WriteLine($"{username} {password}");
-
         return View("Login");
     }
 
