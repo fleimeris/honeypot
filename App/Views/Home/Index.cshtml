@@ -1,0 +1,64 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container mt-5">
+    <div class="row">
+
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="~/assets/chicken_curry.jpg" class="card-img-top" alt="Recipe 1">
+                <div class="card-body">
+                    <h5 class="card-title">Chicken Curry</h5>
+                    <p class="card-text">Delicious and flavorful chicken curry with a spicy kick.</p>
+                    <a href="@Url.Action("Recipe1", "Home")" class="btn btn-primary">View Recipe</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="~/assets/cream-cheese-chicken.jpg" class="card-img-top" alt="Recipe 2">
+                <div class="card-body">
+                    <h5 class="card-title">Cream Cheese Chicken</h5>
+                    <p class="card-text">Easy cream cheese chicken is just a few basic ingredients and simple to make, with a deliciously creamy sauce that coats every piece.</p>
+                    <a href="@Url.Action("Recipe2", "Home")" class="btn btn-primary">View Recipe</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="~/assets/sausage-balls.jpg" class="card-img-top" alt="Recipe 3">
+                <div class="card-body">
+                    <h5 class="card-title">Sausage Balls</h5>
+                    <p class="card-text">If you’ve never heard of sausage balls before, let us introduce you to your new favorite holiday appetizer.</p>
+                    <a href="@Url.Action("Recipe3", "Home")" class="btn btn-primary">View Recipe</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="~/assets/orange.jpg" class="card-img-top" alt="Recipe 4">
+                <div class="card-body">
+                    <h5 class="card-title">Orange Sherbet</h5>
+                    <p class="card-text">If sorbet and ice cream had a love affair, it would be sherbet.</p>
+                    <a href="@Url.Action("Recipe4", "Home")" class="btn btn-primary">View Recipe</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="~/assets/green-smoothie.jpg" class="card-img-top" alt="Recipe 4">
+                <div class="card-body">
+                    <h5 class="card-title">Green Smoothie</h5>
+                    <p class="card-text">On busy mornings, we crave easy, quick, and healthy breakfasts, like our overnight oats or chia pudding. But, for those mornings when we really need to get a boost of greens, we turn to this perfect green smoothie.</p>
+                    <a href="@Url.Action("Recipe5", "Home")" class="btn btn-primary">View Recipe</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
