@@ -12,7 +12,7 @@
                 </div>
                 <div class="card-body">
 
-                    <form>
+                    <form asp-action="LoginUser">
                         <div class="mb-3">
                             <label for="username" class="form-label">Username</label>
                             <input type="text" class="form-control" id="username" name="username" required>
@@ -28,7 +28,7 @@
                             <label class="form-check-label" for="rememberMe">Remember me</label>
                         </div>
 
-                        <button type="submit" href="@Url.Action("LoginAction", "Home")" class="btn btn-primary">Sign In</button>
+                        <button type="submit" class="btn btn-primary">Sign In</button>
                     </form>
 
                 </div>

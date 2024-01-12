@@ -6,13 +6,6 @@ namespace App.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
-
-    public HomeController(ILogger<HomeController> logger)
-    {
-        _logger = logger;
-    }
-
     public IActionResult Index()
     {
         return View();
@@ -21,6 +14,13 @@ public class HomeController : Controller
     public IActionResult Login()
     {
         return View();
+    }
+    
+    public IActionResult LoginUser(string username, string password)
+    {
+        Console.WriteLine($"{username} {password}");
+
+        return View("Login");
     }
 
     public IActionResult Recipe1()
@@ -46,13 +46,6 @@ public class HomeController : Controller
     public IActionResult Recipe5()
     {
         return View();
-    }
-
-    public IActionResult LoginAction()
-    {
-        Console.WriteLine("test");
-
-        return View("Login");
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
