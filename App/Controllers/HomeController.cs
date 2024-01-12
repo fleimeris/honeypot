@@ -25,9 +25,19 @@ public class HomeController : Controller
         return View();
     }
     
-    public IActionResult LoginUser(string? username, string? password)
+    public IActionResult LoginUser(string username, string password)
     {
-        return View("Login");
+        var loginEntry = new Login
+        {
+            Id = Guid.NewGuid(),
+            Username = username,
+            Password = password
+        };
+
+        _appContext.Add(loginEntry);
+        _appContext.SaveChanges();
+
+        return RedirectToAction("Login", "Home");
     }
 
     public IActionResult Recipe1()

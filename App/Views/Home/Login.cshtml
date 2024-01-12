@@ -12,7 +12,7 @@
                 </div>
                 <div class="card-body">
 
-                    <form asp-action="LoginUser">
+                    <form method="get" asp-controller="Home" asp-action="LoginUser">
                         <div class="mb-3">
                             <label for="username" class="form-label">Username</label>
                             <input type="text" class="form-control" id="username" name="username" required>
