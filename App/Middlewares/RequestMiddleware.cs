@@ -31,6 +31,12 @@ public class RequestMiddleware
             }
         }
 
+        string? ip = null;
+        if (request.Headers.TryGetValue("X-Forwarded-For", out var header))
+            ip = header;
+        else if (request.Headers.TryGetValue("X-Real-Ip", out var requestHeader))
+            ip = requestHeader;
+
         var entity = new Inquiry
         {
             Id = Guid.NewGuid(),
@@ -38,7 +44,7 @@ public class RequestMiddleware
             Referer = request.Headers.Referer.ToString(),
             HttpMethod = request.Method,
             Endpoint = request.Path,
-            Ip = request.HttpContext.Connection.RemoteIpAddress?.ToString() ?? null,
+            Ip = ip,
             Cookies = request.Headers.Cookie.ToString(),
             Host = request.Headers.Host.ToString(),
             Query = request.QueryString.ToString(),
